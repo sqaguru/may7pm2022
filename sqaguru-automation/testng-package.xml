@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllPack" parallel="tests" thread-count="10">
+	<test name="AllPackages">
+		<packages>
+			<package name="seleniumtests" />
+		</packages>
+	</test>
+	
+		<test name="AllPackages2">
+		<packages>
+			<package name="seleniumtests" />
+		</packages>
+	</test>
+</suite>

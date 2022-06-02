@@ -12,11 +12,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import commonlib.SeleniumUtils;
+
 public class WebElementCheckBoxTest {
 
 	public static void main(String[] args) {
+		SeleniumUtils seleniumUtils = new SeleniumUtils();
 		System.setProperty("webdriver.chrome.driver",
-				"D:\\sqa-guru\\bat-may22-6-7pm\\batch-may-2022-7pm-ws\\automation-testing-batch-may-2022-7pm\\resources\\drivers\\chromedriver.exe");
+				seleniumUtils.getProjectPath() + "\\resources\\drivers\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 
@@ -43,7 +46,10 @@ public class WebElementCheckBoxTest {
 		WebElement element2 = driver.findElement(By.xpath("//label[text()='Reading']"));
 		element2.click();
 
-		System.out.println("element2 clicked:");
+		WebElement checkBoxMusic = driver.findElement(By.xpath("//label[text()='Music']"));
+		checkBoxMusic.click();
+
+		System.out.println("elements clicked:");
 
 	}
 
